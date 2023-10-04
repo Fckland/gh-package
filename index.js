@@ -20,6 +20,7 @@ const error = model('Error', ErrorSchema);
 
 const otraFuncion = (algo) => {
   console.log(algo);
+  console.log('algoo');
 }
 
 module.exports = {
