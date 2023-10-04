@@ -18,7 +18,12 @@ const ErrorSchema = new Schema(
 
 const error = model('Error', ErrorSchema);
 
+const otraFuncion = (algo) => {
+  console.log(algo);
+}
+
 module.exports = {
   error,
+  otraFuncion,
   sayHello,
 };
