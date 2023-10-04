@@ -1,27 +1,26 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const sayHello = (name) => {
-  console.log('Hello ' + name + '!');
+  console.log("Hello " + name + "!");
 };
-
 
 const ErrorSchema = new Schema(
   {
     backend: { type: String },
     errorMessage: { type: String },
-    errorContext: { type: Object },
+    errorContext: { type: Object, required: true },
     slackLoggedAt: { type: Date },
     previousOccurredAt: { type: Date },
   },
   { timestamps: true }
 );
 
-const error = model('Error', ErrorSchema);
+const error = model("Error", ErrorSchema);
 
 const otraFuncion = (algo) => {
   console.log(algo);
-  console.log('algoo');
-}
+  console.log("algoo");
+};
 
 module.exports = {
   error,
